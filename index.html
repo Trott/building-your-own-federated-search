@@ -355,31 +355,13 @@ Headless browsers are fast compared to Safari and Internet Explorer, but they're
 
 class: center, middle
 
-# Pitfalls
+# I have no opinion&hellip;
+
+&hellip;except when I do.
 
 ???
 
-When trying to implement these solutions, a common scenario is to build your screen-scraping federated search tool with traditional server-side languages like Java or PHP. 
-
-These strategies and technologies bring with them pitfalls to be avoided. 
-
----
-
-class: center, middle
-
-# "My solution only works in Drupal!"
-
-???
-
-Here's one!
-
-Our group built a solution years ago that is implemented in Drupal with no external facing API. 
-
-So, if I want to experiment with a different results interface without rewriting the entire scraping engine, I need to write it in Drupal.
-
-This tight coupling prevents experimentation with other technologies or things that don't fit neatly into the Drupal paradigm.
-
-And that sucks.
+I like to think I'm technology-agnostic and it's probably fine if you've concluded the way to do this is to code up a bunch of enterprise Java, compile it to a WAR file, and deploy that to your Tomcat server.
 
 ---
 
@@ -389,17 +371,19 @@ class: center, middle
 
 ???
 
-A lot of the pitfalls can be avoided by following sound software architecture principles. 
+But it's impossible to deny that **&quot;JavaScript has a more robust and widely-understood set of conventions and tools for processing blobs of HTML than any other programming language.&quot;**
 
-But one thing should be uncontroversial:
+---
 
-**&quot;No programming language has a more robust and widely-understood set of conventions and tools for processing blobs of HTML than JavaScript.&quot;**
+class: center, middle
 
-It's got DOM-handling built right in!
+# JS &amp; HTML
 
-It's got a million battle-tested libraries with simple and powerful jQuery-like selectors!
+BFF
 
-Its sole reason for existing is the web and HTML!
+???
+
+It has built-in DOM-handling, a million battle-tested libraries with simple and powerful jQuery-like selectors, and its sole reason for existing is the web and HTML.
 
 ---
 
