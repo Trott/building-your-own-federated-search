@@ -31,7 +31,10 @@
 <body>
   <textarea id="source">
 
+layout: true
 class: center, middle
+
+---
 
 # Building Your Own Federated Search 
 
@@ -43,8 +46,6 @@ Let's talk about building your own federated search.
 
 ---
 
-class: center, middle
-
 # What
 
 ???
@@ -52,8 +53,6 @@ class: center, middle
 Before we build it, I guess we ought to know what it is.
 
 ---
-
-class: center, middle
 
 <img alt="" src="img/ghostbusted.svg" width="600" height="600">
 
@@ -63,8 +62,6 @@ For starters, it's not metasearch, which I guess means I better take ten seconds
 
 ---
 
-class: center, middle
-
 # Metasearch: one index, multiple resources
 
 ???
@@ -72,8 +69,6 @@ class: center, middle
 Metasearch operates on a one consolidated index harvested from multiple sources; Summon and similar products are metasearch tools.
 
 ---
-
-class: center, middle
 
 # Federated search: one index per resource
 
@@ -83,8 +78,6 @@ Federated search is more like running the same search on ten different search en
 
 ---
 
-class: center, middle
-
 # There are pros&hellip;
 
 ???
@@ -92,8 +85,6 @@ class: center, middle
 Reasons you might want to do this instead of metasearch include&hellip;
 
 ---
-
-class: center, middle
 
 # $
 
@@ -103,8 +94,6 @@ class: center, middle
 
 ---
 
-class: center, middle
-
 # Extensibility 
 
 ???
@@ -112,8 +101,6 @@ class: center, middle
 &hellip;and flexibility to include pretty much anything you can search rather than only things for which you have access to complete metadata.
 
 ---
-
-class: center, middle
 
 # There are cons&hellip;
 
@@ -123,8 +110,6 @@ There are disadvantages to be aware of.
 
 ---
 
-class: center, middle
-
 # Multiple result sets
 
 ???
@@ -132,8 +117,6 @@ class: center, middle
 Getting ten different result sets can be overwhelming compared to a single, sorted result set.
 
 ---
-
-class: center, middle
 
 # But really, why?
 
@@ -143,8 +126,6 @@ Let's say you have dozens of online resources and each of these online resources
 
 ---
 
-class: center, middle
-
 # Here are the 387 URLs to try&hellip;
 
 ???
@@ -152,8 +133,6 @@ class: center, middle
 But users shouldn't be asked to search in dozens of different interfaces to find what they're looking for.
 
 ---
-
-class: center, middle
 
 # Have we mentioned $?
 
@@ -163,8 +142,6 @@ You're cash-constrained&hellip;
 
 ---
 
-class: center, middle
-
 # I am a special snowflake.
 
 ???
@@ -172,8 +149,6 @@ class: center, middle
 &hellip;or you have a specialized collection set that needs searching that is not handled adequately by existing discovery products&hellip;
 
 ---
-
-class: center, middle
 
 # Hi, I'm Cyndi Lauper, and I create amazing user experiences.
 
@@ -183,8 +158,6 @@ class: center, middle
 
 ---
 
-class: center, middle
-
 # Let's federate some search already!
 
 ???
@@ -192,8 +165,6 @@ class: center, middle
 So your focus is on federated search because it's frankly simpler and cheaper than metasearch.
 
 ---
-
-class: center, middle
 
 # 3 Is A Magic Number
 
@@ -217,8 +188,6 @@ There are (at least) three ways to pull data out of other resources in real time
 
 ---
 
-class: center, middle
-
 # #1 
 
 ## Cool, they have an API for that!
@@ -231,8 +200,6 @@ Number 1: The content provider might publish an API, which is somethingf that al
 
 ---
 
-class: center, middle
-
 # Faux APIs will break your heart.
 
 ???
@@ -240,8 +207,6 @@ class: center, middle
 Often what you and I consider an API is not what the content providers consider an API. 
 
 ---
-
-class: center, middle
 
 # You keep using that word. 
 
@@ -251,9 +216,7 @@ I do not think it means what you think it means.
 
 If you give me a script tag that injects a widget into my page, and then you call it an API, that is not an API.
 
----
-
-class: center, middle 
+--- 
 
 # #2
 
@@ -267,8 +230,6 @@ Then there's straightforward grab-the-HTML and scrape the information out of it.
 
 ---
 
-class: center, middle
-
 # <span style="color: red">WARNING</span>
 
 ???
@@ -277,8 +238,6 @@ As we all know, this brittle because the HTML can change and break your scraper.
 
 ---
 
-class: center, middle
-
 # <span style="color: green">UPSIDES</span>
 
 ???
@@ -286,8 +245,6 @@ class: center, middle
 But it has two big upsides.
 
 ---
-
-class: center, middle
 
 # Better than the alternative&hellip;
 
@@ -299,17 +256,13 @@ Number 1: It usually works well enough.
 
 ---
 
-class: center, middle
-
 # You can actually do it.
 
 ???
 
 And number 2: It is usually easy and fast to implement.
 
----
-
-class: center, middle 
+--- 
 
 # Web New-dot-Oh
 
@@ -321,8 +274,6 @@ Lastly, there's what you have to do when confronted with a site powered by front
 
 ---
 
-class: center, middle
-
 # Headless browsers to the rescue
 
 ???
@@ -331,8 +282,6 @@ For this, make friends with headless browsers like PhantomJS to scrape these sit
 
 ---
 
-class: center, middle
-
 # <span style="color: yellow">CAUTION</span>
 
 ???
@@ -340,8 +289,6 @@ class: center, middle
 This should be your last resort, not your first choice. 
 
 ---
-
-class: center, middle
 
 # Fast!
 
@@ -353,8 +300,6 @@ Headless browsers are fast compared to Safari and Internet Explorer, but they're
 
 ---
 
-class: center, middle
-
 # I have no opinion&hellip;
 
 &hellip;except when I do.
@@ -365,8 +310,6 @@ I like to think I'm technology-agnostic and it's probably fine if you've conclud
 
 ---
 
-class: center, middle
-
 # JavaScript FTW
 
 ???
@@ -374,8 +317,6 @@ class: center, middle
 But it's impossible to deny that **&quot;JavaScript has a more robust and widely-understood set of conventions and tools for processing blobs of HTML than any other programming language.&quot;**
 
 ---
-
-class: center, middle
 
 # JS &amp; HTML
 
@@ -387,8 +328,6 @@ It has built-in DOM-handling, a million battle-tested libraries with simple and 
 
 ---
 
-class: center, middle
-
 # Node.js FTW
 
 ???
@@ -396,8 +335,6 @@ class: center, middle
 So we decided that it probably made sense to build our federated search server using Node.js.
 
 ---
-
-class: center, middle
 
 # Browserify FTW
 
@@ -410,8 +347,6 @@ No need to talk to your server!
 If it's all just JavaScript, why not?
 
 ---
-
-class: center, middle
 
 # Amalgamatic
 
@@ -480,8 +415,7 @@ We define a callback to work on the results set.
 
 And now we search!
 
----
-class: center, middle
+--
 
 # Amalgamatic plugins
 
@@ -501,8 +435,6 @@ All the plugins are published via npm and tagged `amalgamatic-plugin` so you can
 
 ---
 
-class: center, middle
-
 # API server
 
 ## Node.js, Express
@@ -514,8 +446,6 @@ class: center, middle
 Third, we used Amalgamatic to expose federated search on our Node.JS-powered API server.
 
 ---
-
-class: center, middle
 
 # Federated search prototype
 
@@ -532,8 +462,6 @@ If you don't know it, look it up, it rules.
 It's one of the unsung majesticly awesome APIs, powerful and simple, and it doesn't get the attention it deserves.
 
 ---
-
-class: center, middle
 
 # Browserified Demo
 
@@ -646,8 +574,6 @@ Finally, we include the bundle in our HTML file.
 
 ---
 
-class: center, middle
-
 <img src="img/calendar.png" alt="">
 
 ???
@@ -670,8 +596,6 @@ Yesterday, I thought, "If all the people complaining about the schedule would ch
 
 ---
 
-class: center, middle
-
 ### https://github.com/ucsf-ckm/amalgamatic-h5dcsched
 
 ???
@@ -684,8 +608,6 @@ But the code is straightforward HTML scraping.
 
 ---
 
-class: center, middle
-
 ### https://github.com/Trott/devconf-calendar
 
 ???
@@ -694,8 +616,6 @@ Then I wrote a quick browserified page to use the plugin to dump JSON calendar d
 
 ---
 
-class: center, middle
-
 ### http://trott.github.io/devconf-calendar
 
 ???
@@ -703,8 +623,6 @@ class: center, middle
 And we can see it here, and hope it works, WiFi-willing.
 
 ---
-
-class: center, middle
 
 # Step 3: Profit!
 
@@ -721,8 +639,6 @@ To be fair, I tweeted about it just before midnight yesterday, so not a lot of t
 But you know, maybe next year I'll think of doing this a day ahead of the conference rather than halfway into it.
 
 ---
-
-class: center, middle
 
 # Thanks!!
 
