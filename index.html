@@ -352,27 +352,23 @@ Or maybe even take it a step further and just put all the federated search code 
 
 First, we wrote a pluggable, extensible federated search tool called Amalgamatic.
 
-Now, remember, this can be used on the server&mdash;a Node.js server&mdash;or in the browser.
-
 ---
 
-class: middle
-
-````
-# npm install --save amalgamatic amalgamatic-sfx amalgamatic-pubmed
-````
+### `npm install --save amalgamatic`
 
 ???
 
-Either way, you install it with `npm`. 
-
-Here, I'm installing both amalgamatic and a pair of plugins.
-
-We'll get to those in a minute.
+You install it with `npm`. 
 
 ---
 
-class: middle
+### `npm install --save amalgamatic-pubmed`
+
+???
+
+By itself, it doesn't do much, so you need to install plugsins too, which we'll get to in a minute.
+
+---
 
 ````javascript
 // Load Amalgamatic
