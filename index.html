@@ -23,7 +23,10 @@
     a {
       color: white;
     }
-    .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    .remark-code, .remark-inline-code { 
+      font-family: 'Ubuntu Mono';
+      text-align: left;
+    }
   </style>
 
   <base target="_blank" />
@@ -366,7 +369,7 @@ You install it with `npm`.
 
 ???
 
-By itself, it doesn't do much, so you need to install plugsins too, which we'll get to in a minute.
+By itself, it doesn't do much, so you need to install plugins too, which we'll get to in a minute.
 
 ---
 
@@ -374,9 +377,9 @@ By itself, it doesn't do much, so you need to install plugsins too, which we'll 
 // Load Amalgamatic
 var amalgamatic = require('amalgamatic');
 
-// Load some plugins to search SFX and PubMed.
-var sfx = require('amalgamatic-sfx');
+// Load some plugins to search PubMed and SFX.
 var pubmed = require('amalgamatic-pubmed');
+var sfx = require('amalgamatic-sfx');
 
 // Add the plugins to Amalgamatic.
 amalgamatic.add('sfx', sfx);
@@ -399,15 +402,9 @@ amalgamatic.search({searchTerm: 'medicine'}, callback);
 
 ???
 
-Now we use `require` to load amalgamatic and the plugins. 
+Here's a sample minimal server, if you care.
 
-We add the plugins to amalgamatic.
-
-We define a callback to work on the results set.
-
-And now we search!
-
---
+---
 
 # Amalgamatic plugins
 
