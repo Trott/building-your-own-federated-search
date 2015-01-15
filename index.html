@@ -432,31 +432,13 @@ Hopefully, there's a plugin for whatever you want to do, but if not, there's a s
 
 ---
 
-# API server
-
-## Node.js, Express
-
-### https://github.com/Trott/apis.ucsf.edu
-
-???
-
-Third, we used Amalgamatic to expose federated search on our Node.JS-powered API server.
-
----
-
-# Federated search prototype
+# Our federated search
 
 ## http://search.library.ucsf.edu/
 
 ???
 
-Fourth, we set up a prototype search interface to use that API.
-
-Obligatory HTML5 API shoutout to EventSource! 
-
-If you don't know it, look it up, it rules. 
-
-It's one of the unsung majesticly awesome APIs, powerful and simple, and it doesn't get the attention it deserves.
+We stuck amalgamatic on an API server we run and created this interface to it.
 
 ---
 
@@ -466,11 +448,7 @@ It's one of the unsung majesticly awesome APIs, powerful and simple, and it does
 
 ???
 
-Lastly, because we could, we used Browserify to create a demo showing how to use Amalgamatic so that all the retrieval and processing happens in the browser</a>&mdash;no need for an intermediary API or search server! 
-
-A small caveat on the Browserify-ed version: One thing the browser couldn't do was launch the headless browser for scraping sites that depend on JavaScript execution to display results. 
-
-So maybe there's another reason to keep that as a last resort technique only.
+But you don't need a server to handle the search federation, so here's a federated search example that runs via Browserify entirely within the browser.
 
 ---
 
