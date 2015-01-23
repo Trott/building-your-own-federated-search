@@ -455,37 +455,15 @@ But you don't need a server to handle the search federation, so here's a federat
 class: middle
 
 ````javascript
-var amalgamatic = require('amalgamatic');
-
 var sfx = require('amalgamatic-sfx');
 sfx.setOptions({
     url: 'http://cors-anywhere.herokuapp.com/ucelinks.cdlib.org:8888/sfx_ucsf/az'
 });
-
-amalgamatic.add('sfx', sfx);
-
-var drupal6 = require('amalgamatic-drupal6');
-drupal6.setOptions({
-    url: 'http://cors-anywhere.herokuapp.com/www.library.ucsf.edu/search/node'
-});
-amalgamatic.add('drupal6', drupal6);
-
-&hellip;
 ````
 
 ???
 
-Here's the start of the JavaScript code that our Browserify demo app uses.
-
-Here you can see our cheat.
-
-Instead of using the source we want to scrape directly, we're running it through a free CORS proxy.
-
-There's a few free CORS proxies out there, and I chose CORS Anywhere for my demo.
-
-You don't need this for APIs that send CORS headers.
-
-But for other APIs, and for screen scraping, you'll need some CORS headers added.
+For those of you who might be wondering about same-origin policy issues, the short answer is we used CORS where we could and a CORS proxy where we could not use CORS directly.
 
 ---
 
