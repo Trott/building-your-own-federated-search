@@ -57,7 +57,7 @@ Before we build it, I guess we ought to know what it is.
 
 ---
 
-<img alt="" src="img/ghostbusted.svg" width="600" height="600">
+<img alt="Not Metasearch" src="img/ghostbusted.svg" width="600" height="600">
 
 ???
 
@@ -467,8 +467,6 @@ For those of you who might be wondering about same-origin policy issues, the sho
 
 ---
 
-class: middle
-
 ````javascript
 var options = {
   searchTerm: searchTerm, // We snarfed this from the form earlier
@@ -494,15 +492,50 @@ amalgamatic.search(options);
 
 And here's the code that does the search.
 
-You'll notice here that we're not using a callback in the search call at the bottom.
+---
 
-Instead, there's a plugin callback specified in the options object. 
+````javascript
+amalgamatic.search(options);
+````
 
-The plugin callback is called for each plugin when it returns its results.
+???
 
-The global callback, in contrast, runs when all the results return.
+This time, in the search call, we're not using the callback that is invoked when all the plugins have finished returning data.
+
+---
+
+```javascript
+var options = {
+  searchTerm: searchTerm, // We snarfed this from the form earlier
+  
+  pluginCallback: function (err, result) {
+    var elem = document.getElementById(result.name);
+    if (err) {
+      elem.textContent = err.message;
+    } else {
+      if (result.data.length) {
+        // Code that inserts results into the DOM
+      } else {
+        elem.innerHTML = 'No results. :-(';
+      }
+    }
+  }
+
+};
+````
+
+???
+
+Instead, in the options object, we're specifying a plugin callback that gets called each time a plugin returns data.
+
+---
+
+<img alt="Have these results while you wait for these other results." src="img/loading.png" width="748" height="279">
+
+???
 
 Using the plugin callback allows us to show results as they arrive rather than making the user wait for the slowest plugin to return before showing anything.
+
 ---
 
 class: middle
