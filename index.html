@@ -452,8 +452,6 @@ But you don't need a server to handle the search federation, so here's a federat
 
 ---
 
-class: middle
-
 ````javascript
 var sfx = require('amalgamatic-sfx');
 sfx.setOptions({
@@ -538,8 +536,6 @@ Using the plugin callback allows us to show results as they arrive rather than m
 
 ---
 
-class: middle
-
 `# browserify -o bundle.js main.js`
 
 ???
@@ -547,8 +543,6 @@ class: middle
 Next, we take that JavaScript, which is in `main.js`, and we bundle it up with Browserify into `bundle.js`.
 
 ---
-
-class: middle
 
 ````html
 <script src="bundle.js"></script>
@@ -560,25 +554,19 @@ Finally, we include the bundle in our HTML file.
 
 ---
 
-<img src="img/calendar.png" alt="">
+# But wait! There's more!
 
 ???
 
-Now, I've been using amalgamatic for search, but I want to encourage people to think creatively about this.
+Getting creative, we can add search&mdash;again, even without any server-side components&mdash;for small resources that don't even have a search interface or API.
 
-It can really be used to scrape anything.
+---
 
-So you can basically take something that doesn't have an API, and create your own API.
+<img src="img/cenic-header.png" alt="">
 
-Like...maybe...this thing.
+???
 
-The much-maligned HTML5DevConf online schedule.
-
-I don't begrudge the conference about this. 
-
-This is a super-affordable conference powered by volunteers and a shoestring budget.
-
-Yesterday, I thought, "If all the people complaining about the schedule would channel that effort towards fixing it, we'd be all set."
+Let's take the CENIC conference website, which has a nice search box in the header that, when you enter some search terms and submit the form, does absolutely nothing whatsoever.
 
 ---
 
